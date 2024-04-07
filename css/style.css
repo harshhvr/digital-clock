@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a1d1b;
+}
+
+.digital-clock {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 0.5vmin;
+}
+.digital-clock .flex-v-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vmin;
+}
+.digital-clock #sg_H0,
+.digital-clock #sg_H1,
+.digital-clock #sg_M0,
+.digital-clock #sg_M1,
+.digital-clock #sg_S0,
+.digital-clock #sg_S1 {
+  width: 6vmin;
+}
+.digital-clock #sg_MS0,
+.digital-clock #sg_MS1,
+.digital-clock #sg_MS2 {
+  width: 3vmin;
+}
+.digital-clock #sg_C0,
+.digital-clock #sg_C1 {
+  width: 1.125vmin;
+}
+.digital-clock #sg_C0 path,
+.digital-clock #sg_C1 path {
+  fill: #36bc6c;
+}
+.digital-clock #sg_D0 {
+  width: 0.56vmin;
+}
+.digital-clock #sg_D0 rect {
+  fill: lime;
+}
+.digital-clock .sg_group_part {
+  fill: #232624;
+}
+.digital-clock .sg_group_part.on {
+  fill: #36bc6c;
+}

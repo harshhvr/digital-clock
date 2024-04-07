@@ -1,0 +1,74 @@
+$primary: #36bc6c;
+$secondary: #343936;
+$tertiary: #232624;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a1d1b;
+}
+
+.digital-clock {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 0.5vmin;
+
+  .flex-v-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vmin;
+  }
+
+  #sg_H0,
+  #sg_H1,
+  #sg_M0,
+  #sg_M1,
+  #sg_S0,
+  #sg_S1 {
+    width: 6vmin;
+  }
+
+  #sg_MS0,
+  #sg_MS1,
+  #sg_MS2 {
+    width: 3vmin;
+  }
+
+  #sg_C0,
+  #sg_C1 {
+    width: 1.125vmin;
+
+    path {
+      fill: $primary;
+    }
+  }
+
+  #sg_D0 {
+    width: .56vmin;
+
+    rect {
+      fill: lime;
+    }
+  }
+
+  //
+
+  .sg_group_part {
+    fill: $tertiary;
+
+    &.on {
+      fill: $primary;
+    }
+  }
+}

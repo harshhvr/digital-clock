@@ -1,0 +1,12 @@
+<svg width="270" height="490" viewBox="0 0 270 490" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#343936">
+        <path d="M60 0L35 25L60 50H210L235 25L210 0H60Z" />
+        <path d="M270 60L245 35L220 60V210L245 235L270 210V60Z" />
+        <path d="M270 280L245 255L220 280V430L245 455L270 430V280Z" />
+        <path d="M60 440L35 465L60 490H210L235 465L210 440H60Z" />
+        <path d="M50 280L25 255L0 280L0 430L25 455L50 430V280Z" />
+        <path d="M50 60L25 35L0 60L0 210L25 235L50 210V60Z" />
+        <path d="M60 220L35 245L60 270H210L235 245L210 220H60Z" />
+    </g>
+</svg>
+    

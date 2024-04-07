@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- My JS -->
+    <script src="./js/functions.js"></script>
+  </head>
+  <body>
+    <div class="digital-clock">
+      <div class="flex-v-center">
+        <!-- Hour Segments -->
+        <svg
+          id="sg_H0"
+          class="seven-segment"
+          viewBox="0 0 270 490"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="#343936">
+            <path
+              id="sg_H0_a"
+              class="sg_group_part sg_g_a"
+              d="M60 0L35 25L60 50H210L235 25L210 0H60Z"
+            />
+            <path
+              id="sg_H0_b"
+              class="sg_group_part sg_g_b"
+              d="M270 60L245 35L220 60V210L245 235L270 210V60Z"
+            />
+            <path
+              id="sg_H0_c"
+              class="sg_group_part sg_g_c"
+              d="M270 280L245 255L220 280V430L245 455L270 430V280Z"
+            />
+            <path
+              id="sg_H0_d"
+              class="sg_group_part sg_g_d"
+              d="M60 440L35 465L60 490H210L235 465L210 440H60Z"
+            />
+            <path
+              id="sg_H0_e"
+              class="sg_group_part sg_g_e"
+              d="M50 280L25 255L0 280L0 430L25 455L50 430V280Z"
+            />
+            <path
+              id="sg_H0_f"
+              class="sg_group_part sg_g_f"
+              d="M50 60L25 35L0 60L0 210L25 235L50 210V60Z"
+            />
+            <path
+              id="sg_H0_g"
+              class="sg_group_part sg_g_g"
+              d="M60 220L35 245L60 270H210L235 245L210 220H60Z"
+            />
+          </g>
+        </svg>
+        <svg
+          id="sg_H1"
+          class="seven-segment"
+          viewBox="0 0 270 490"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="#343936">
+            <path
+              id="sg_H1_a"
+              class="sg_group_part sg_g_a"
+              d="M60 0L35 25L60 50H210L235 25L210 0H60Z"
+            />
+            <path
+              id="sg_H1_b"
+              class="sg_group_part sg_g_b"
+              d="M270 60L245 35L220 60V210L245 235L270 210V60Z"
+            />
+            <path
+              id="sg_H1_c"
+              class="sg_group_part sg_g_c"
+              d="M270 280L245 255L220 280V430L245 455L270 430V280Z"
+            />
+            <path
+              id="sg_H1_d"
+              class="sg_group_part sg_g_d"
+              d="M60 440L35 465L60 490H210L235 465L210 440H60Z"
+            />
+            <path
+              id="sg_H1_e"
+              class="sg_group_part sg_g_e"
+              d="M50 280L25 255L0 280L0 430L25 455L50 430V280Z"
+            />
+            <path
+              id="sg_H1_f"
+              class="sg_group_part sg_g_f"
+              d="M50 60L25 35L0 60L0 210L25 235L50 210V60Z"
+            />
+            <path
+              id="sg_H1_g"
+              class="sg_group_part sg_g_g"
+              d="M60 220L35 245L60 270H210L235 245L210 220H60Z"
+            />
+          </g>
+        </svg>
+
+        <!-- Colon Segment -->
+        <svg
+          id="sg_C0"
+          class="colon-segment"
+          viewBox="0 0 50 270"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="#343936">
+            <path d="M50 25L25 0L0 25L25 50L50 25Z" />
+            <path d="M50 245L25 220L0 245L25 270L50 245Z" />
+          </g>
+        </svg>
+
+        <!-- Minute Segments -->
+        <svg
+          id="sg_M0"
+          class="seven-segment"
+          viewBox="0 0 270 490"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="#343936">
+            <path
+              id="sg_M0_a"
+              class="sg_group_part sg_g_a"
+              d="M60 0L35 25L60 50H210L235 25L210 0H60Z"
+            />
+            <path
+              id="sg_M0_b"
+              class="sg_group_part sg_g_b"
+              d="M270 60L245 35L220 60V210L245 235L270 210V60Z"
+            />
+            <path
+              id="sg_M0_c"
+              class="sg_group_part sg_g_c"
+              d="M270 280L245 255L220 280V430L245 455L270 430V280Z"
+            />
+            <path
+              id="sg_M0_d"
+              class="sg_group_part sg_g_d"
+              d="M60 440L35 465L60 490H210L235 465L210 440H60Z"
+            />
+            <path
+              id="sg_M0_e"
+              class="sg_group_part sg_g_e"
+              d="M50 280L25 255L0 280L0 430L25 455L50 430V280Z"
+            />
+            <path
+              id="sg_M0_f"
+              class="sg_group_part sg_g_f"
+              d="M50 60L25 35L0 60L0 210L25 235L50 210V60Z"
+            />
+            <path
+              id="sg_M0_g"
+              class="sg_group_part sg_g_g"
+              d="M60 220L35 245L60 270H210L235 245L210 220H60Z"
+            />
+          </g>
+        </svg>
+        <svg
+          id="sg_M1"
+          class="seven-segment"
+          viewBox="0 0 270 490"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="#343936">
+            <path
+              id="sg_M1_a"
+              class="sg_group_part sg_g_a"
+              d="M60 0L35 25L60 50H210L235 25L210 0H60Z"
+            />
+            <path
+              id="sg_M1_b"
+              class="sg_group_part sg_g_b"
+              d="M270 60L245 35L220 60V210L245 235L270 210V60Z"
+            />
+            <path
+              id="sg_M1_c"
+              class="sg_group_part sg_g_c"
+              d="M270 280L245 255L220 280V430L245 455L270 430V280Z"
+            />
+            <path
+              id="sg_M1_d"
+              class="sg_group_part sg_g_d"
+              d="M60 440L35 465L60 490H210L235 465L210 440H60Z"
+            />
+            <path
+              id="sg_M1_e"
+              class="sg_group_part sg_g_e"
+              d="M50 280L25 255L0 280L0 430L25 455L50 430V280Z"
+            />
+            <path
+              id="sg_M1_f"
+              class="sg_group_part sg_g_f"
+              d="M50 60L25 35L0 60L0 210L25 235L50 210V60Z"
+            />
+            <path
+              id="sg_M1_g"
+              class="sg_group_part sg_g_g"
+              d="M60 220L35 245L60 270H210L235 245L210 220H60Z"
+            />
+          </g>
+        </svg>
+
+        <!-- Colon Segment -->
+        <svg
+          id="sg_C1"
+          class="colon-segment"
+          viewBox="0 0 50 270"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="#343936">
+            <path d="M50 25L25 0L0 25L25 50L50 25Z" />
+            <path d="M50 245L25 220L0 245L25 270L50 245Z" />
+          </g>
+        </svg>
+
+        <!-- Second Segments -->
+        <svg
+          id="sg_S0"
+          class="seven-segment"
+          viewBox="0 0 270 490"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="#343936">
+            <path
+              id="sg_S0_a"
+              class="sg_group_part sg_g_a"
+              d="M60 0L35 25L60 50H210L235 25L210 0H60Z"
+            />
+            <path
+              id="sg_S0_b"
+              class="sg_group_part sg_g_b"
+              d="M270 60L245 35L220 60V210L245 235L270 210V60Z"
+            />
+            <path
+              id="sg_S0_c"
+              class="sg_group_part sg_g_c"
+              d="M270 280L245 255L220 280V430L245 455L270 430V280Z"
+            />
+            <path
+              id="sg_S0_d"
+              class="sg_group_part sg_g_d"
+              d="M60 440L35 465L60 490H210L235 465L210 440H60Z"
+            />
+            <path
+              id="sg_S0_e"
+              class="sg_group_part sg_g_e"
+              d="M50 280L25 255L0 280L0 430L25 455L50 430V280Z"
+            />
+            <path
+              id="sg_S0_f"
+              class="sg_group_part sg_g_f"
+              d="M50 60L25 35L0 60L0 210L25 235L50 210V60Z"
+            />
+            <path
+              id="sg_S0_g"
+              class="sg_group_part sg_g_g"
+              d="M60 220L35 245L60 270H210L235 245L210 220H60Z"
+            />
+          </g>
+        </svg>
+        <svg
+          id="sg_S1"
+          class="seven-segment"
+          viewBox="0 0 270 490"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="#343936">
+            <path
+              id="sg_S1_a"
+              class="sg_group_part sg_g_a"
+              d="M60 0L35 25L60 50H210L235 25L210 0H60Z"
+            />
+            <path
+              id="sg_S1_b"
+              class="sg_group_part sg_g_b"
+              d="M270 60L245 35L220 60V210L245 235L270 210V60Z"
+            />
+            <path
+              id="sg_S1_c"
+              class="sg_group_part sg_g_c"
+              d="M270 280L245 255L220 280V430L245 455L270 430V280Z"
+            />
+            <path
+              id="sg_S1_d"
+              class="sg_group_part sg_g_d"
+              d="M60 440L35 465L60 490H210L235 465L210 440H60Z"
+            />
+            <path
+              id="sg_S1_e"
+              class="sg_group_part sg_g_e"
+              d="M50 280L25 255L0 280L0 430L25 455L50 430V280Z"
+            />
+            <path
+              id="sg_S1_f"
+              class="sg_group_part sg_g_f"
+              d="M50 60L25 35L0 60L0 210L25 235L50 210V60Z"
+            />
+            <path
+              id="sg_S1_g"
+              class="sg_group_part sg_g_g"
+              d="M60 220L35 245L60 270H210L235 245L210 220H60Z"
+            />
+          </g>
+        </svg>
+      </div>
+
+      <!-- Dot Segments -->
+      <svg
+        id="sg_D0"
+        class="dot-segment"
+        viewBox="0 0 50 50"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g fill="#343936">
+          <rect width="50" height="50" />
+        </g>
+      </svg>
+
+      <div class="flex-v-center">
+        <!-- Milliseconds Segments -->
+        <svg
+          id="sg_MS0"
+          class="seven-segment"
+          viewBox="0 0 270 490"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="#343936">
+            <path
+              id="sg_MS0_a"
+              class="sg_group_part sg_g_a"
+              d="M60 0L35 25L60 50H210L235 25L210 0H60Z"
+            />
+            <path
+              id="sg_MS0_b"
+              class="sg_group_part sg_g_b"
+              d="M270 60L245 35L220 60V210L245 235L270 210V60Z"
+            />
+            <path
+              id="sg_MS0_c"
+              class="sg_group_part sg_g_c"
+              d="M270 280L245 255L220 280V430L245 455L270 430V280Z"
+            />
+            <path
+              id="sg_MS0_d"
+              class="sg_group_part sg_g_d"
+              d="M60 440L35 465L60 490H210L235 465L210 440H60Z"
+            />
+            <path
+              id="sg_MS0_e"
+              class="sg_group_part sg_g_e"
+              d="M50 280L25 255L0 280L0 430L25 455L50 430V280Z"
+            />
+            <path
+              id="sg_MS0_f"
+              class="sg_group_part sg_g_f"
+              d="M50 60L25 35L0 60L0 210L25 235L50 210V60Z"
+            />
+            <path
+              id="sg_MS0_g"
+              class="sg_group_part sg_g_g"
+              d="M60 220L35 245L60 270H210L235 245L210 220H60Z"
+            />
+          </g>
+        </svg>
+        <svg
+          id="sg_MS1"
+          class="seven-segment"
+          viewBox="0 0 270 490"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="#343936">
+            <path
+              id="sg_MS1_a"
+              class="sg_group_part sg_g_a"
+              d="M60 0L35 25L60 50H210L235 25L210 0H60Z"
+            />
+            <path
+              id="sg_MS1_b"
+              class="sg_group_part sg_g_b"
+              d="M270 60L245 35L220 60V210L245 235L270 210V60Z"
+            />
+            <path
+              id="sg_MS1_c"
+              class="sg_group_part sg_g_c"
+              d="M270 280L245 255L220 280V430L245 455L270 430V280Z"
+            />
+            <path
+              id="sg_MS1_d"
+              class="sg_group_part sg_g_d"
+              d="M60 440L35 465L60 490H210L235 465L210 440H60Z"
+            />
+            <path
+              id="sg_MS1_e"
+              class="sg_group_part sg_g_e"
+              d="M50 280L25 255L0 280L0 430L25 455L50 430V280Z"
+            />
+            <path
+              id="sg_MS1_f"
+              class="sg_group_part sg_g_f"
+              d="M50 60L25 35L0 60L0 210L25 235L50 210V60Z"
+            />
+            <path
+              id="sg_MS1_g"
+              class="sg_group_part sg_g_g"
+              d="M60 220L35 245L60 270H210L235 245L210 220H60Z"
+            />
+          </g>
+        </svg>
+        <svg
+          id="sg_MS2"
+          class="seven-segment"
+          viewBox="0 0 270 490"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="#343936">
+            <path
+              id="sg_MS2_a"
+              class="sg_group_part sg_g_a"
+              d="M60 0L35 25L60 50H210L235 25L210 0H60Z"
+            />
+            <path
+              id="sg_MS2_b"
+              class="sg_group_part sg_g_b"
+              d="M270 60L245 35L220 60V210L245 235L270 210V60Z"
+            />
+            <path
+              id="sg_MS2_c"
+              class="sg_group_part sg_g_c"
+              d="M270 280L245 255L220 280V430L245 455L270 430V280Z"
+            />
+            <path
+              id="sg_MS2_d"
+              class="sg_group_part sg_g_d"
+              d="M60 440L35 465L60 490H210L235 465L210 440H60Z"
+            />
+            <path
+              id="sg_MS2_e"
+              class="sg_group_part sg_g_e"
+              d="M50 280L25 255L0 280L0 430L25 455L50 430V280Z"
+            />
+            <path
+              id="sg_MS2_f"
+              class="sg_group_part sg_g_f"
+              d="M50 60L25 35L0 60L0 210L25 235L50 210V60Z"
+            />
+            <path
+              id="sg_MS2_g"
+              class="sg_group_part sg_g_g"
+              d="M60 220L35 245L60 270H210L235 245L210 220H60Z"
+            />
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- My JS -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
